@@ -1,5 +1,6 @@
 import About from "./about";
 import Project from "./project";
+import Services from "./service";
 import Skills from "./skills";
 
 const Main = () => {
@@ -8,6 +9,7 @@ const Main = () => {
      <About />
      <Skills />
      <Project />
+     <Services />
     </main>
   );
 };

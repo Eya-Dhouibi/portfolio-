@@ -7,7 +7,14 @@ const Skills = () => {
     {
       category: "Développement Front-End",
       items: [
-        "HTML", "CSS", "JavaScript", "Bootstrap", "SASS", "Gulp", "Twig", "Smarty", "Webpack",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "SASS",
+        "Gulp",
+        "Twig",
+        "Smarty",
+        "Webpack",
       ],
     },
     {
@@ -25,22 +32,25 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills">
-    <div className="container">
-    <h2>Compétences</h2>
-     <div className="skills-content">
-      {skills.map((skill, index) => (
-            <article className="card">
-            <div className="box">
-            <h3 className="title">{skill.category}</h3>
+    <section id="skills" className="skills-section">
+      <div className="container">
+        <h2 className="section-title">Compétences</h2>
+        <div className="skills-grid">
+          {skills.map((skill, index) => (
+            <div className="skill-card" key={index}>
+              <h3>{skill.category}</h3>
+              <p>
                 {skill.items.map((item, idx) => (
-                  <span className="sub-title" key={idx}> {item},&nbsp;</span>
+                  <span key={idx}>
+                    {item}
+                    {idx < skill.items.length - 1 ? ", " : ""}
+                  </span>
                 ))}
+              </p>
             </div>
-          </article>
-      ))}
+          ))}
+        </div>
       </div>
-    </div>
     </section>
   );
 };

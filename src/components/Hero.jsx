@@ -14,8 +14,8 @@ const Hero = () => {
         </p>
 
         <div className="all-icons">
-          <div className="icon icon-github"></div>
-          <div className="icon icon-linkedin"></div>
+          <div className="icon icon-github"><a href="https://github.com/Eya-Dhouibi/"></a></div>
+          <div className="icon icon-linkedin"><a href="https://www.linkedin.com/in/eya-dhouibi-716620178/"></a></div>
         </div>
       </div>
 
