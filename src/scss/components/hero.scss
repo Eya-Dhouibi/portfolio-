@@ -1,0 +1,67 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+.hero-content {
+    overflow: hidden;
+  }
+  
+  /* ========================
+      1. Left Section
+  =========================== */
+  section.hero .parent-avatar.flex {
+    align-items: end;
+    gap: 0.6rem;
+  }
+  
+  section.hero .icon-verified {
+    color: $blue;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  section.hero .avatar {
+    width: 88px;
+    border-radius: 50%;
+    border: 1px solid darkorange;
+    padding: 1px;
+    box-shadow: 2px 2px 40px rgba(203, 200, 200, 0.586) inset;
+  }
+  
+  section.hero h1.title {
+    font-size: 2rem;
+    line-height: 2.7rem;
+    margin: 24px 0;
+    color: $text-color;
+  }
+  
+  section.hero p.sub-title {
+    color: $subtitle;
+    font-size: 0.9rem;
+    line-height: 1.65rem;
+    margin-bottom: 32px;
+  }
+  
+  section.hero .all-icons {
+    position: fixed;
+    left: 0;
+    top: 33%;
+    font-size: 1.4rem;
+  }
+  
+  section.hero .all-icons .icon{
+    background-color: #c25eba;
+    padding: .5rem;
+    border-radius: 0 15px 15px 0;
+  }
+  
+  .icon.icon-github {
+    margin-bottom: 16px;
+  }
+  
+  section.hero .all-icons .icon:hover {
+    font-size: 1.4rem;
+    transition: 0.3s;
+    cursor: pointer;
+    color: $icon-hover;
+  }
+  

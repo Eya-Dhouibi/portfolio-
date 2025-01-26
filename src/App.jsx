@@ -6,10 +6,12 @@ import Main from "./components/Main";
 
 function App() {
   return (
-    <div id="up" className="container">
+    <div id="up">
+      <div className="top-section">
       <Header />
-
       <Hero />
+      </div>
+
       <div className="divider" />
       <Main />
       <div className="divider" />
@@ -17,10 +19,6 @@ function App() {
       <Contact />
       <div className="divider" />
       <Footer />
-
-    <a href="#up">
-        <button className="icon-keyboard_arrow_up scroll2Top"></button>
-    </a>
     </div>
   );
 }

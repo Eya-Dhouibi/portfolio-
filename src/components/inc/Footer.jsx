@@ -1,7 +1,11 @@
 import React from "react";
 const Footer = () => {
   return (
-    <footer className="flex">
+    <footer>
+       <div  className="container">
+       <a href="#up">
+        <button className="icon-keyboard_arrow_up scroll2Top"></button>
+    </a>
       <ul className="flex">
         <li>
           <a href="">About</a>
@@ -18,6 +22,7 @@ const Footer = () => {
       </ul>
 
       <p>© 2023 Spencer Sharp. All rights reserved.</p>
+      </div>
     </footer>
   );
 };

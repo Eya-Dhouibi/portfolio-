@@ -1,33 +1,31 @@
-
 const Hero = () => {
   return (
-    <section className="hero flex">
-      <div className="left-section  ">
-        <div className="parent-avatar flex">
-          <img src="./logo.png" className="avatar" alt="" />
-          <div className="icon-verified"></div>
-        </div>
-
+    <section className="hero">
+          <div  className="container">
+          <div  className="hero-content">
+      <div className="left-section">
         <h1 className="title">
-          Software designer, founder, and amateur astronaut.
+        Développeur / Intégrateur web
         </h1>
         <p className="sub-title">
-          I’m Ali Hassan, a software designer and entrepreneur based in New York
-          City. I’m the founder and CEO of Planetaria, where we develop
-          technologies that empower regular people to explore space on their own
-          terms.
+        En tant que développeur /  intégrateur  web, je propose mes compétences pour créer des sites 
+        alliant esthétiques et fonctionnalité, en veillant à une intégration fluide pour offrir 
+        une expérience utilisateur optimale.
         </p>
 
-        <div className="all-icons flex">
-          <div className="icon icon-twitter"></div>
-          <div className="icon icon-instagram"></div>
+        <div className="all-icons">
           <div className="icon icon-github"></div>
           <div className="icon icon-linkedin"></div>
         </div>
       </div>
 
-      <div className="right-section animation border">animation</div>
+      <div className="right-section">
+      <img width={699} height={531} src="/img/hero.png" className="img-hero" alt="hero" />
+      </div>
+      </div>
+      </div>
     </section>
+   
   );
 };
 

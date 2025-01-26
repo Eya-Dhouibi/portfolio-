@@ -1,7 +1,7 @@
-
 const Contact = () => {
   return (
-    <section className="contact-us">
+    <section id="contact">
+       <div  className="container">
       <h1 className="title">
         <span className="icon-envelope"> </span>
         Contact us
@@ -25,7 +25,7 @@ const Contact = () => {
 
           <button className="submit">Submit</button>
         </form>
-        <div className="border animation">animation</div>
+      </div>
       </div>
     </section>
   );

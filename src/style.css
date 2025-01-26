@@ -31,7 +31,7 @@ html {
 
   --icon-hover: #d4d4d8;
 
-  --container-padding: 4.8rem;
+  --container-padding: 2rem;
 }
 
 .light {
@@ -44,17 +44,14 @@ body {
 }
 
 .container {
-  border: 2px solid var(--border);
-  width: 80%;
+  width: 1024px;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--secondary);
   padding: 0 var(--container-padding);
 }
 
 .divider {
   border-bottom: 1px solid var(--border);
-
   margin: 3rem 0;
   width: calc(100% + var(--container-padding) + var(--container-padding));
   margin-left: calc(var(--container-padding) * -1);
@@ -174,7 +171,6 @@ html {
 =========================== */
 header.flex {
   justify-content: space-between;
-  padding: 0 2.4rem;
   margin-top: 1.2rem;
 }
 
@@ -330,6 +326,7 @@ header .fixed ul.modal li a {
 
 section.hero {
   margin-top: 3rem;
+  text-align: center;
 }
 
 /* ========================
@@ -376,6 +373,7 @@ section.hero .all-icons {
   font-size: 1.3rem;
   gap: 1.5rem;
   color: var(--subtitle);
+  justify-content: center;
 }
 
 section.hero .all-icons .icon:hover {
