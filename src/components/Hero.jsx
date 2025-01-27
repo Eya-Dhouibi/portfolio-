@@ -13,6 +13,13 @@ const Hero = () => {
         une expérience utilisateur optimale.
         </p>
 
+        <a href="/img/Dhouibieya-integrateur-web.pdf" target="_blank" rel="noopener noreferrer">
+              <button type="button" className="btn-rounded">
+                Consulter Cv
+                <span className="icon-arrow-right"></span>
+              </button>
+            </a>
+
         <div className="all-icons">
           <div className="icon icon-github"><a href="https://github.com/Eya-Dhouibi/"></a></div>
           <div className="icon icon-linkedin"><a href="https://www.linkedin.com/in/eya-dhouibi-716620178/"></a></div>

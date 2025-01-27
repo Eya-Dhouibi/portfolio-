@@ -21,6 +21,11 @@ const Footer = () => {
         </li>
       </ul>
 
+      <button type="button" className="btn-rounded">
+       +216 56418926
+        <span className="icon-phone-alt"></span>
+      </button>
+      
       <p>© 2023 Spencer Sharp. All rights reserved.</p>
       </div>
     </footer>

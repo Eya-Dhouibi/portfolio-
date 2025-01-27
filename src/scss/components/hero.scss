@@ -65,3 +65,21 @@
     color: $icon-hover;
   }
   
+  .hero-content button
+  {
+    position: relative;
+    padding: 0.8375rem 4.375rem 0.8375rem 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    border: 0.1rem solid rgba(255, 255, 255, 0.6);
+    display: block;
+    cursor: pointer;
+    border-radius: 50rem;
+    background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+}
+
+.hero-content button span{
+  position: absolute;
+  right: 40px;
+  top: 38%;
+}

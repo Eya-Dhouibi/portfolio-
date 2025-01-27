@@ -47,6 +47,7 @@ const Header = () => {
         <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#about-me">Accueil</a></li>
         <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#about">Profil</a></li>
         <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#skills">Compétences</a></li>
+        <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#skills">Services</a></li>
         <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#project">Porjets</a></li>
         <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#contact">Contact</a></li>
         </ul>

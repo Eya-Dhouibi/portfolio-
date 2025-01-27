@@ -2,11 +2,11 @@
 @use '../variables' as *;
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-  }
-  
+  @include grid-columns(3);
+  @media (max-width: 992px) {
+    @include grid-columns(3); 
+}
+}
   .service-card {
     text-align: center;
     background: #f9f9f9;
@@ -37,4 +37,3 @@
     font-size: 0.9rem;
     color: #555;
   }
-  
