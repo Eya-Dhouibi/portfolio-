@@ -78,11 +78,11 @@
   content: "\f3a5";
 }
 .icon-code:before {
-  content: "";
+  content: "\f121"
 }
 .icon-tv:before {
   content: "\f26c";
 }
 .icon-arrow-right:before {
-  content: "";
+  content: "\e902";
 }

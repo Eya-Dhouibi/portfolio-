@@ -26,18 +26,8 @@
     padding: 1px;
     box-shadow: 2px 2px 40px rgba(203, 200, 200, 0.586) inset;
   }
-  
-  section.hero h1.title {
-    font-size: 2rem;
-    line-height: 2.7rem;
-    margin: 24px 0;
-    color: $text-color;
-  }
-  
+
   section.hero p.sub-title {
-    color: $subtitle;
-    font-size: 0.9rem;
-    line-height: 1.65rem;
     margin-bottom: 32px;
   }
   
@@ -68,18 +58,11 @@
   .hero-content button
   {
     position: relative;
-    padding: 0.8375rem 4.375rem 0.8375rem 1.25rem;
-    font-weight: 700;
-    margin: 0;
-    border: 0.1rem solid rgba(255, 255, 255, 0.6);
-    display: block;
-    cursor: pointer;
-    border-radius: 50rem;
-    background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+    padding: 0.8375rem 3rem 0.8375rem 1.25rem;
 }
 
 .hero-content button span{
   position: absolute;
-  right: 40px;
-  top: 38%;
+  right: 20px;
+  top: 37%;
 }

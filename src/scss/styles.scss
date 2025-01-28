@@ -8,6 +8,7 @@
 @use './components/contact' as *;
 @use './components/footer' as *;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 
 html {
@@ -30,7 +31,7 @@ html {
 
 body {
   font-family: $body-font;
-  background-color: $primary;
+  background-color:hsl(0deg 0% 0%);
   color: $text-color;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -39,21 +40,20 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font;
   margin-bottom: 1rem;
-  color: $text-color;
+  color: $subtitle;
   font-weight: 600;
 }
 
 h1 {
-  font-size: 2.5rem;
+  @include heading-styles(2.5rem, 3.2rem);
 }
 
 h2 {
-  font-size: 2rem;
-  text-align: center;
+  @include heading-styles(2rem, 2.7rem, center);
 }
 
 h3 {
-  font-size: 1.75rem;
+  @include heading-styles(1.75rem, 2.3rem);
 }
 
 p {
@@ -62,29 +62,35 @@ p {
   color: $text-color;
 }
 
+.icon{
+  color: $subtitle;
+}
 a {
   text-decoration: none;
-  color: $primary;
+  color: $subtitle;
   transition: color 0.3s ease;
 
   &:hover {
-    color: darken($primary, 10%);
+    color: darken($subtitle, 10%);
   }
 }
 
-button {
+.btn {
+  display: block;
   font-family: $heading-font;
-  background-color: $primary;
-  color: #fff;
+  background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+  color: $subtitle;
   border: none;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   border-radius: $border-radius;
+  border: 0.1rem solid $text-color;
+  font-weight: 700;
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    background-color: darken($primary, 10%);
+    background-color: darken($subtitle, 10%);
     box-shadow: 0 6px 14px rgba(0, 123, 255, 0.3);
   }
 
@@ -138,6 +144,9 @@ button {
 }
 
 button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(130, 32, 204);
+  border-color: rgb(122, 30, 192);
   cursor: pointer;
 }
 
@@ -174,6 +183,7 @@ html {
 .scroll2Top {
   position: relative;
   background-color: #c25eba;
+  color: $subtitle;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
@@ -200,18 +210,6 @@ section#about img {
 ======================================== */
 
 @media (max-width: 601px) {
-  header nav {
-    display: none;
-  }
-
-  header button.menu {
-    display: block;
-  }
-
-  .img-hero {
-    width: 300px;
-    height: auto;
-  }
 
   .myProject-content {
     flex-direction: column;

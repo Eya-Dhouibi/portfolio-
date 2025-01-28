@@ -1,4 +1,26 @@
+@use './variables' as *;
+
 // Mixins
+@mixin heading-styles($font-size, $line-height, $text-align: left) {
+  font-family: $heading-font;
+  margin-bottom: 1rem;
+  color: $subtitle;
+  font-weight: 600;
+  font-size: $font-size;
+  line-height: $line-height;
+  text-align: $text-align;
+
+  @media (max-width: 768px) {
+    font-size: $font-size * 0.85;
+    line-height: $line-height * 0.85;
+  }
+
+  @media (max-width: 480px) {
+    font-size: $font-size * 0.7;
+    line-height: $line-height * 0.7;
+  }
+}
+
 @mixin flex($justify-content: flex-start, $gap: 0) {
     display: flex;
     align-items: center;

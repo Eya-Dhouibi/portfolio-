@@ -14,20 +14,20 @@ const Hero = () => {
         </p>
 
         <a href="/img/Dhouibieya-integrateur-web.pdf" target="_blank" rel="noopener noreferrer">
-              <button type="button" className="btn-rounded">
-                Consulter Cv
+              <button type="button" className="btn btn-rounded">
+              DÉCOUVRIR MON CV
                 <span className="icon-arrow-right"></span>
               </button>
             </a>
 
         <div className="all-icons">
-          <div className="icon icon-github"><a href="https://github.com/Eya-Dhouibi/"></a></div>
-          <div className="icon icon-linkedin"><a href="https://www.linkedin.com/in/eya-dhouibi-716620178/"></a></div>
+          <a href="https://github.com/Eya-Dhouibi/" target="_blank" rel="noopener noreferrer"><div className="icon icon-github"></div></a>
+          <a href="https://www.linkedin.com/in/eya-dhouibi-716620178/" target="_blank" rel="noopener noreferrer"><div className="icon icon-linkedin"></div></a>
         </div>
       </div>
 
       <div className="right-section">
-      <img width={699} height={531} src="/img/hero.png" className="img-hero" alt="hero" />
+      <img width={553} height={420} src="/img/hero.png" className="img-hero" alt="hero" />
       </div>
       </div>
       </div>

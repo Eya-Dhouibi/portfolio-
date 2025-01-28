@@ -70,11 +70,12 @@ const Header = () => {
                 {/* Icone pour fermer le modal */}
               </button>
             </li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Articles</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Speaking</a></li>
-            <li><a href="#">Uses</a></li>
+        <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#about-me">Accueil</a></li>
+        <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#about">Profil</a></li>
+        <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#skills">Compétences</a></li>
+        <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#skills">Services</a></li>
+        <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#project">Porjets</a></li>
+        <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#contact">Contact</a></li>
           </ul>
         </div>
       )}
