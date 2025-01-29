@@ -85,7 +85,7 @@ section#about img {
     ================================== */
     
     #project .right-section {
-      @include grid-columns(3); 
+      @include grid-columns(1); 
     }
     
     .card {
