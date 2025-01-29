@@ -17,9 +17,9 @@ const Project = () => {
           {["aa", "bb", "cc", 1, 7].map((item) => {
             return (
               <article key={item} className="  card">
-                <img width={266} src="/img/1.png" alt="" />
+                <img src="/img/1.png" alt="" />
   
-                <div style={{ width: "266px" }} className="box">
+                <div className="box">
                   <h3 className="title">Landing Page 2 </h3>
                   <p className="sub-title">
                     Lorem ipsum dolor sit amet consectetur elit adipisicing . Ex
