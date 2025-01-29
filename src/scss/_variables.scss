@@ -1,21 +1,46 @@
-// Variables
+// Variables globales
 $heading-font: 'Poppins', sans-serif;
 $body-font: 'Roboto', sans-serif;
+$white:#ffffffff;
 $border-radius: 50px;
 $box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-
-$primary: hsl(304.8deg 45.05% 56.47%);
-$secondary: rgb(24, 24, 27);
-$border: rgba(63, 63, 70, 0.4);
-$text-color: rgb(161, 161, 170);
-$subtitle: rgb(255, 255, 255);
-$bgHeader: rgb(39, 39, 42);
-$blue: rgb(93, 188, 252);
-$icon-hover: #d4d4d8;
 $container-padding: 2rem;
 $icon-size: 1.2rem;
 
-// Light Mode
-.light {
-    $primary: #fff;
+// Thème sombre
+$dark-theme: (
+  bg-primary: rgba(0, 0, 0, 1),
+  primary: hsl(304.8deg 45.05% 56.47%),
+  secondary: rgb(24, 24, 27),
+  text-color: rgb(161, 161, 170),
+  subtitle: rgb(255, 255, 255),
+  bg-header: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(7, 3, 62) 80%, rgb(8, 4, 67) 100%),
+);
+
+// Thème clair
+$light-theme: (
+  bg-primary: $white,
+  primary: $white,
+  secondary: #f5f5f5,
+  text-color: #333,
+  subtitle: #000,
+  bg-header: $white,
+);
+
+// Mix-in pour appliquer le thème
+@mixin apply-theme($theme) {
+  @each $key, $value in $theme {
+    --#{$key}: #{$value};
   }
+}
+
+// Application des thèmes en fonction du mode
+html[data-theme="dark"] {
+  @include apply-theme($dark-theme);
+}
+
+html[data-theme="light"] {
+  @include apply-theme($light-theme);
+}
+
+

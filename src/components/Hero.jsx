@@ -15,7 +15,7 @@ const Hero = () => {
 
         <a href="/img/Dhouibieya-integrateur-web.pdf" target="_blank" rel="noopener noreferrer">
               <button type="button" className="btn btn-rounded">
-              DÉCOUVRIR MON CV
+                  DÉCOUVRIR MON CV
                 <span className="icon-arrow-right"></span>
               </button>
             </a>

@@ -1,6 +1,44 @@
 @use '../mixins' as *;
 @use '../variables' as *;
 
+/*************** SKILLS ***************/
+
+section#about img {
+  display: flex;
+  margin: 2rem auto;
+}
+
+.skills-content{
+  flex-wrap: wrap;
+  @include flex(center,1rem)
+}
+
+.skills-grid {
+    @include grid-columns(1);
+  }
+  
+  .skill-card {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .skill-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+  }
+
+    /* ===============================
+       PROJET
+    ================================== */
 .myProject-content {
     @include flex(space-between,0);
     align-items: flex-start;
@@ -35,7 +73,7 @@
       font-weight: bold;
       letter-spacing: 0.6px;
       padding: 0.8rem 0;
-      border: 1px solid $blue;
+      border: 1px solid var(--secondary);
     }
     
     /* ===============================
@@ -58,7 +96,7 @@
     }
     
     .card:hover {
-      border: 1px solid $blue;
+      border: 1px solid var(--secondary);
       rotate: 1deg;
       scale: 1.01;
       cursor: pointer;
@@ -73,11 +111,11 @@
     }
     
     .card .box .title {
-      color: $text-color;
+      color: var(--text-color);
     }
     
     .card .box .sub-title {
-      color: $subtitle;
+      color: var(--subtitle);
       font-size: 0.8rem;
       margin-top: 0.7rem;
       margin-bottom: 1.1rem;
@@ -90,19 +128,57 @@
     .card .icon-github,
     .card .icon-link {
       font-size: 1.2rem;
-      color: $subtitle;
+      color: var(--subtitle);
     }
     
     .card .icon-github:hover,
     .card .icon-link:hover {
       font-size: 1.25rem;
-      color: $icon-hover;
+      color: var(--primary);
       cursor: pointer;
     }
     
     .card a.link {
       font-size: 0.9rem;
-      color: $blue;
+      color: var(--secondary);
       margin-right: 12px;
     }
     
+
+/**************** SERVICES *******************/
+.services-grid {
+  @include grid-columns(3);
+  @media (max-width: 992px) {
+    @include grid-columns(3); 
+}
+}
+  .service-card {
+    text-align: center;
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-card i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+  }
+  
+  .service-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .service-card p {
+    font-size: 0.9rem;
+    color: #555;
+  }

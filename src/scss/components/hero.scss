@@ -14,7 +14,7 @@
   }
   
   section.hero .icon-verified {
-    color: $blue;
+    color:var(--subtitle);
     font-size: 1.1rem;
     margin-bottom: 0.3rem;
   }
@@ -42,6 +42,7 @@
     background-color: #c25eba;
     padding: .5rem;
     border-radius: 0 15px 15px 0;
+    color: $white;
   }
   
   .icon.icon-github {
@@ -49,10 +50,9 @@
   }
   
   section.hero .all-icons .icon:hover {
-    font-size: 1.4rem;
     transition: 0.3s;
     cursor: pointer;
-    color: $icon-hover;
+    color: var(--primary);
   }
   
   .hero-content button

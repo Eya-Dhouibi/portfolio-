@@ -12,14 +12,14 @@ footer.flex{
     
     
     footer.flex ul a{
-      color: $subtitle;
+      color: var(--subtitle);
       font-size: 0.9rem;
       font-weight: 400;
     }
     
     
     footer.flex ul a:hover{
-      color: $blue;
+      color: var(--secondary);
       font-size: 1rem;
       font-weight: 500;
     }

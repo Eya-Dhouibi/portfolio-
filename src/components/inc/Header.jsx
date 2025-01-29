@@ -1,23 +1,32 @@
 import { useState, useEffect } from "react";
 
 const Header = () => {
-  const [showModal, setShowModal] = useState(false); // Etat pour afficher/masquer le modal
-  const [isSticky, setIsSticky] = useState(false); // Etat pour gérer le sticky header
+  const [showModal, setShowModal] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(
+    localStorage.getItem("theme") === "dark"
+  );
 
   // Fonction pour écouter le défilement
   const handleScroll = () => {
-    if (window.scrollY > 50) { // Définir la hauteur à partir de laquelle le header devient sticky
-      setIsSticky(true);
-    } else {
-      setIsSticky(false);
-    }
+    setIsSticky(window.scrollY > 50);
   };
 
-  // Utilisation de useEffect pour ajouter l'événement scroll
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+  // Fonction pour basculer le thème clair/sombre
+  const toggleTheme = () => {
+    const newTheme = isDarkMode ? "light" : "dark";
+    setIsDarkMode(!isDarkMode);
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
 
-    // Nettoyer l'événement au démontage du composant
+  // Appliquer le dernier thème utilisé au chargement
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", savedTheme);
+    setIsDarkMode(savedTheme === "dark");
+
+    window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -25,61 +34,55 @@ const Header = () => {
 
   return (
     <header id="header" className={isSticky ? "sticky" : ""}>
-      <div  className="container">
+      <div className="container">
         <div className="header_content">
-      {/* Bouton pour ouvrir le modal */}
-      <button 
-        onClick={() => setShowModal(true)} 
-        className="menu icon-menu flex"
-      >
-        {/* Contenu du bouton menu, probablement une icône */}
-      </button>
+          {/* Bouton pour ouvrir le modal */}
+          <button onClick={() => setShowModal(true)} className="menu icon-menu flex">
+            {/* Icône du menu */}
+          </button>
 
-      {/* Section de l'avatar */}
-      <div className="parent-avatar flex">
-        <img src="/img/logo.png" className="avatar" alt="Logo" />
-        <div className="icon-verified"></div>
-      </div>
+          {/* Section de l'avatar */}
+          <div className="parent-avatar flex">
+            <img src="/img/logo.png" className="avatar" alt="Logo" />
+            <div className="icon-verified"></div>
+          </div>
 
-      {/* Navigation principale */}
-      <nav>
-        <ul className="flex">
-        <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#about-me">Accueil</a></li>
-        <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#about">Profil</a></li>
-        <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#skills">Compétences</a></li>
-        <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#skills">Services</a></li>
-        <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#project">Porjets</a></li>
-        <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#contact">Contact</a></li>
-        </ul>
-      </nav>
+          {/* Navigation principale */}
+          <nav>
+            <ul className="flex">
+              <li className="navbar_item"><a className="navbar_link" href="/#about-me">Accueil</a></li>
+              <li className="navbar_item"><a className="navbar_link" href="/#about">Profil</a></li>
+              <li className="navbar_item"><a className="navbar_link" href="/#skills">Compétences</a></li>
+              <li className="navbar_item"><a className="navbar_link" href="/#services">Services</a></li>
+              <li className="navbar_item"><a className="navbar_link" href="/#project">Projets</a></li>
+              <li className="navbar_item"><a className="navbar_link" href="/#contact">Contact</a></li>
+            </ul>
+          </nav>
 
-      {/* Bouton de mode (thème clair/sombre) */}
-      <button className="mode flex">
-        <span className="icon-moon-o"></span>
-      </button>
+          {/* Bouton de mode (thème clair/sombre) */}
+          <button className="mode flex" onClick={toggleTheme}>
+            <span className={`icon-moon-o ${isDarkMode ? "active" : ""}`}></span>
+          </button>
 
-      {/* Modal, affiché seulement si showModal est true */}
-      {showModal && (
-        <div className="fixed">
-          <ul className="modal">
-            <li>
-              <button 
-                className="icon-close" 
-                onClick={() => setShowModal(false)} // Ferme le modal
-              >
-                {/* Icone pour fermer le modal */}
-              </button>
-            </li>
-        <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#about-me">Accueil</a></li>
-        <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#about">Profil</a></li>
-        <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#skills">Compétences</a></li>
-        <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#skills">Services</a></li>
-        <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#project">Porjets</a></li>
-        <li className="navbar_item"><a aria-current="page" className="navbar_link" href="/#contact">Contact</a></li>
-          </ul>
+          {/* Modal de navigation mobile */}
+          {showModal && (
+            <div className="fixed">
+              <ul className="modal">
+                <li>
+                  <button className="icon-close" onClick={() => setShowModal(false)}>
+                    {/* Icône pour fermer le modal */}
+                  </button>
+                </li>
+                <li className="navbar_item"><a className="navbar_link" href="/#about-me">Accueil</a></li>
+                <li className="navbar_item"><a className="navbar_link" href="/#about">Profil</a></li>
+                <li className="navbar_item"><a className="navbar_link" href="/#skills">Compétences</a></li>
+                <li className="navbar_item"><a className="navbar_link" href="/#services">Services</a></li>
+                <li className="navbar_item"><a className="navbar_link" href="/#project">Projets</a></li>
+                <li className="navbar_item"><a className="navbar_link" href="/#contact">Contact</a></li>
+              </ul>
+            </div>
+          )}
         </div>
-      )}
-      </div>
       </div>
     </header>
   );

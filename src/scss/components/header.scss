@@ -2,7 +2,7 @@
 @use '../variables' as *;
 
 .top-section {
-    background: linear-gradient(1800deg, rgb(0 0 0) 0%, rgba(7, 3, 62, 1) 80%, rgba(8, 4, 67, 1) 100%);
+  background-color:var(--bg-header);
   }
   
   header {
@@ -10,8 +10,8 @@
     top: 0;
     background: transparent;
     box-shadow: none;
-    transition: all .3s ease-in-out;
     z-index: 1000;
+    transition: background-color 0.3s ease;
   }
   
   .header_content{
@@ -19,12 +19,11 @@
   }
   
   #header.sticky {
-    background: linear-gradient(#000, 85%, #bc4ebf);
+    background: var(--bg-header);
     box-shadow: 1em 1em 10em .1em #bc4ebf;
   }
   
   header.flex nav {
-    background-color: $bgHeader;
     padding: 0.77rem 1.6rem;
     border-radius: 55px;
     box-shadow: 1px 1px 40px #2323242a;
@@ -36,14 +35,14 @@
   
   header ul li a {
     font-family: $heading-font;
-    color: $subtitle;
+    color: var(--subtitle);
     opacity: 0.9;
     font-size: 0.88rem;
     font-weight: 500;
   }
   
   header ul li a:hover {
-    color: $primary;
+    color: var(--primary);
     opacity: 1;
     font-size: 0.9rem;
   }
@@ -63,7 +62,7 @@
   header button.mode {
     position: relative;
     background-color: #c25eba;
-    color: $subtitle;
+    color: $white;
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
@@ -72,12 +71,13 @@
 
   header .icon-menu:hover,
   header button.mode:hover {
-    border: 1px solid $text-color;
+    border: 1px solid var(--text-color);
+    cursor: pointer;
   }
   
   header .icon-close {
     font-size: 1.5rem;
-    color: $subtitle;
+    color: var(--subtitle);
     transition: 0.3s;
   }
   
@@ -122,11 +122,11 @@
     margin-top: 2rem;
     border-radius: 1rem;
     padding: 1rem 2rem;
-    background-color: $secondary;
+    background-color: var(--secondary);
   }
   
   header .fixed ul.modal li {
-    border-bottom: 1px solid $border;
+    border-bottom: 1px solid var(--secondary);
     padding-bottom: 0.77rem;
     padding-top: 0.5rem;
   }
