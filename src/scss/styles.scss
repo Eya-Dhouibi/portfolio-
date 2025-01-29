@@ -178,25 +178,17 @@ li {
 ======================================== */
 
 @media (max-width: 601px) {
-
-  .myProject-content {
-    flex-direction: column;
-    gap: 2.64rem;
-    align-items: center;
-  }
-
   #project .left-section {
     flex-direction: row;
     flex-wrap: wrap;
     @include flex(center, 10px);
-  }
 
-  #project .left-section button {
-    width: 7rem;
-    padding: 0.8rem 0;
-    font-size: 0.9rem;
+    button {
+      width: 7rem;
+      padding: 0.8rem 0;
+      font-size: 0.9rem;
+    }
   }
-
   #contact  form {
     display: flex;
     flex-direction: column;
@@ -230,4 +222,16 @@ li {
   .hero-content {
     @include flex(space-between, 0);
   }
+}
+
+@media (min-width: 992px) {
+  .myProject-content {
+    @include flex(space-between,1rem);
+    align-items: flex-start;
+    flex-direction: row;
+    }
+}
+
+@media (max-width: 992px) {
+
 }

@@ -2,12 +2,10 @@
 @use '../variables' as *;
 
 .top-section {
-  background-color:var(--bg-header);
+  background:var(--bg-header);
   }
   
   header {
-    position: sticky;
-    top: 0;
     background: transparent;
     box-shadow: none;
     z-index: 1000;
@@ -19,6 +17,11 @@
   }
   
   #header.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s;
+    z-index: 1000;
     background: var(--bg-header);
     box-shadow: 1em 1em 10em .1em #bc4ebf;
   }
