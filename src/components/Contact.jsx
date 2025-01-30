@@ -7,64 +7,68 @@ const Contact = () => {
   return (
     <section id="contact" className="contact-section">
       <div className="container">
-        <h1 className="contact-title">
-          <span className="icon-envelope"></span> Contact us
-        </h1>
+        <h2 className="contact-title">
+          <span className="icon-envelope"></span> Contactez-nous
+        </h2>
         <p className="contact-sub-title">
-          Contact us for more information and get notified when I publish something new.
+          N'hésitez pas à nous contacter pour plus d'informations ou pour être informé de nos nouveautés.
         </p>
 
         <div className="contact-row">
           <div className="cta-info">
-            <h4 className="cta-title">100% Satisfaction Guaranteed</h4>
+            <h4 className="cta-title">Satisfaction 100% garantie</h4>
             <p className="cta-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam alias optio minima, tempore architecto sint ipsam dolore tempora facere laboriosam corrupti!
+              Nous nous engageons à fournir un service de qualité. Contactez-nous pour discuter de votre projet et voir comment nous pouvons vous aider.
             </p>
-            <h3 className="next-step-title">What will be the next step?</h3>
+            <h3 className="next-step-title">Quelles sont les prochaines étapes ?</h3>
             <ul className="cta-list">
-              <li>We'll prepare the proposal.</li>
-              <li>We'll discuss it together.</li>
-              <li>Let's start the discussion.</li>
+              <li>Nous préparons une proposition adaptée à vos besoins.</li>
+              <li>Nous en discutons ensemble pour l'ajuster.</li>
+              <li>Nous lançons le projet une fois validé.</li>
             </ul>
           </div>
           <div className="contact-form">
-            <h4 className="form-title">Start your project</h4>
-            <form onSubmit={handleSubmit} className="form-fields">
+            <h4 className="form-title">Démarrez votre projet</h4>
+            <form onSubmit={handleSubmit} className=" form-fields">
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="First Name"
+                  placeholder="Prénom"
                   id="inputFirstName"
                   className="form-input"
+                  required
                 />
               </div>
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Last Name"
+                  placeholder="Nom"
                   id="inputLastName"
                   className="form-input"
+                  required
                 />
               </div>
               <div className="form-group">
                 <input
                   type="email"
-                  placeholder="Email address"
+                  placeholder="Adresse e-mail"
                   id="inputEmail"
                   className="form-input"
+                  required
                 />
               </div>
               <div className="form-group">
                 <textarea
                   name="message"
-                  placeholder="Message"
+                  placeholder="Votre message"
                   id="message"
                   className="form-input"
+                  required
                 ></textarea>
               </div>
               <div className="form-submit">
-                <button type="submit" className="submit-button">
-                  Submit
+                <button type="submit" className="btn submit-button">
+                  Envoyer
                   <i className="fas fa-paper-plane"></i>
                 </button>
               </div>
