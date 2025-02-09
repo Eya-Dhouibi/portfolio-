@@ -42,10 +42,11 @@
     opacity: 0.9;
     font-size: 0.88rem;
     font-weight: 500;
+    cursor: pointer;
   }
   
   header ul li a:hover {
-    color: var(--primary);
+    color: #c25eba;
     opacity: 1;
     font-size: 0.9rem;
   }
@@ -65,11 +66,12 @@
   header button.mode {
     position: relative;
     background-color: #c25eba;
-    color: $white;
-    width: 2.5rem;
-    height: 2.5rem;
+    color:$white;
+    border: none;
+    padding: 12px;
     border-radius: 50%;
-    @include flex(center,0)
+    cursor: pointer;
+    transition: background 0.3s;
   }
 
   header .icon-menu:hover,

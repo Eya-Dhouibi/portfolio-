@@ -22,11 +22,13 @@ text-align: center;
   background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
 }
 .cta-title {
+  color: $white;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
 .cta-description {
+  color: $white;
   font-size: 1rem;
   margin: 20px 0;
 }
@@ -37,6 +39,7 @@ text-align: center;
 }
 
 .cta-list {
+  color: $white;
   list-style: none;
   padding-left: 0;
 }
@@ -55,7 +58,7 @@ text-align: center;
 .form-title {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 30px;
 }
 

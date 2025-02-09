@@ -1,30 +1,110 @@
 @use '../mixins' as *;
 @use '../variables' as *;
 
-footer.flex{
-    justify-content: space-between;
-      padding-bottom: 1.9rem;
-    }
-    
-    footer.flex ul{
-      gap: 1rem;
-    }
-    
-    
-    footer.flex ul a{
-      color: var(--subtitle);
-      font-size: 0.9rem;
-      font-weight: 400;
-    }
-    
-    
-    footer.flex ul a:hover{
-      color: var(--secondary);
-      font-size: 1rem;
-      font-weight: 500;
-    }
-    
-    footer.flex p{
-      color: rgb(113 113 122);
-    }
+/* Styles généraux du footer */
+.footer {
+  color: var(--text-color);
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Bouton de retour en haut */
+.scroll-top {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.scroll-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.scroll-button:hover {
+  background-color: #555;
+}
+
+.scroll2Top {
+  background-color: #c25eba;
+  color:$white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 2rem;
+  right: 3%;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s;
+  
+  &:hover{
+    background-color: #c787c2;
+  }
+}
+
+/* Liens utiles */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  @include flex(center,20px);
+  margin-bottom: 15px;
+}
+
+.footer-links li a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    color: #999;
+  }
+}
+
+/* Contact */
+.footer-contact {
+  @include flex(center,10px);
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact-link {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #999;
+  }
+}
+
+.separator {
+  color: var(--text-color);
+}
+
+/* Réseaux sociaux */
+.footer-social {
+  @include flex(center,15px);
+  margin-bottom: 15px;
+}
+
+.social-link {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #999;
+  }
+}
+
+/* Texte du footer */
+.footer-text {
+  font-size: 14px;
+  color:var(--text-color);
+}
   
