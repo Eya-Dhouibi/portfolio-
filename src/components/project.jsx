@@ -6,7 +6,7 @@ const projects = [
     title: "Site de Kinésithérapie",
     description: "Création d'un site vitrine responsive pour un cabinet de kinésithérapie.",
     category: "HTML & CSS",
-    image: "/img/projet-1.jpg",
+    image: "/img/florianthibautkinesitherapeute.jpg",
     link: "https://www.florianthibautkinesitherapeute.be/",
   },
   {
@@ -14,7 +14,7 @@ const projects = [
     title: "Atelier de la Flamme",
     description: "Site web pour une entreprise spécialisée dans l'isolation et la cheminée.",
     category: "HTML & CSS",
-    image: "/img/projet-2.jpg",
+    image: "/img/Magasin-chauffage-Torcy.jpg",
     link: "https://www.atelierdelaflammeetdelisolation.com/",
   },
   {
@@ -22,7 +22,7 @@ const projects = [
     title: "Cabinet d'Avocate",
     description: "Site pour un cabinet d'avocate, mettant en avant les services juridiques.",
     category: "HTML & CSS",
-    image: "/img/projet-3.jpg",
+    image: "/img/leguillant-avocate.jpg",
     link: "https://www.leguillant-avocate.fr/",
   },
   {
@@ -49,6 +49,15 @@ const projects = [
     image: "/img/1.png",
     link: "http://chocosec.wuaze.com/",
   },
+  {
+    id: 7,
+    title: "willworkplus",
+    description: "Site de vente en ligne des fruits secs et de chocolate",
+    category: "Wordpress & Prestashop",
+    image: "/img/willworkplus.jpg",
+    link: "https://willworkplus.com/",
+  }
+  
 ];
 
 const categories = ["Tous les projets", "HTML & CSS", "JavaScript", "Wordpress & Prestashop"];
