@@ -30,7 +30,7 @@ const projects = [
     title: "Auto-École Ciné Evreux",
     description: "Site vitrine pour une auto-école, avec une section d'inscription en ligne.",
     category: "HTML & CSS",
-    image: "/img/projet-4.jpg",
+    image: "/img/auto-ecole-cine.jpg",
     link: "https://www.auto-ecole-cine-evreux.fr/",
   },
   {
@@ -38,7 +38,7 @@ const projects = [
     title: "RH44 Nettoyage",
     description: "Site pour une entreprise de nettoyage industriel et domestique.",
     category: "HTML & CSS",
-    image: "/img/projet-5.jpg",
+    image: "/img/rh44-nettoyage.jpg",
     link: "https://www.rh44-nettoyage.fr/",
   },
   {
@@ -46,7 +46,7 @@ const projects = [
     title: "ChocoSec",
     description: "Site de vente en ligne des fruits secs et de chocolate",
     category: "Wordpress & Prestashop",
-    image: "/img/1.png",
+    image: "/img/chocoSec.jpg",
     link: "http://chocosec.wuaze.com/",
   },
   {

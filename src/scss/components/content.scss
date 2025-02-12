@@ -87,7 +87,9 @@ section#about img {
     #project .right-section {
       @include grid-columns(1); 
     }
-    
+    #project .container{
+      max-width: 1200px;
+    }
     .card {
       position: relative;
       border: 1px solid rgba(93, 188, 252, 0.3);
@@ -101,7 +103,6 @@ section#about img {
       cursor: pointer;
       transition: 0.3s all ease;
       overflow: hidden;
-      width: 290px;
       
       &:hover {
         border: 1px solid var(--secondary);
