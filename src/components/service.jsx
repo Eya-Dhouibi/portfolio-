@@ -57,10 +57,6 @@ const Services = () => {
     <section id="services" className="services-section">
       <div className="container">
         <h2 className="section-title">Services Offerts</h2>
-        <p className="section-description">
-          Avec plus de 5 ans d'expérience dans la conception et le développement web, 
-          j'ai découvert que je peux aider les startups et les entreprises grâce aux services suivants :
-        </p>
         <Slider {...settings}>
           {services.map((service, index) => (
             <div className="service-card" key={index}>
