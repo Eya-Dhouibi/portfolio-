@@ -184,7 +184,7 @@ section#about img {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-height: 265px;
+    min-height: 293px;
   }
   
   .service-card:hover {
@@ -199,8 +199,9 @@ section#about img {
   }
   
   .service-card h4 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    margin: 0.5rem auto;
+    line-height: 28px;
     color: #333;
   }
   
