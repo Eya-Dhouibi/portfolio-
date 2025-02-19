@@ -32,8 +32,6 @@ section#about img {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
     color: #333;
-    height: 60px;
-    overflow: hidden;
   }
   
   .skill-card p {
@@ -215,6 +213,10 @@ section#about img {
       @include flex(space-between,2rem);
       align-items: flex-start;
       flex-direction: row;
+      }
+      .skill-card h3 {
+        height: 60px;
+        overflow: hidden;
       }
   }
   
