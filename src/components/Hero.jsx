@@ -4,9 +4,10 @@ const Hero = () => {
           <div  className="container">
           <div  className="hero-content">
       <div className="left-section">
-        <h1 className="title">
-        Développeur / Intégrateur web
-        </h1>
+        <div className="title">
+          <h1>Dhouibi Eya</h1>
+          <span>Développeur / Intégrateur web</span>
+        </div>
         <p className="sub-title">
         En tant que développeur /  intégrateur  web, je propose mes compétences pour créer des sites 
         alliant esthétiques et fonctionnalité, en veillant à une intégration fluide pour offrir 

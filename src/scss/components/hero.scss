@@ -27,18 +27,65 @@
     box-shadow: 2px 2px 40px rgba(203, 200, 200, 0.586) inset;
   }
 
-  section.hero p.sub-title {
+  @keyframes reveal {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+  @keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes showup {
+  0% {opacity:0;}
+  20% {opacity:1;}
+  80% {opacity:1;}
+  100% {opacity:0;}
+}
+
+.hero-content .title{
+animation: reveal 4s infinite;
+}
+
+.hero-content .title h1{
+  animation: showup 4s infinite;
+  margin-bottom: 0;
+}
+
+.hero-content .title span{
+  margin-left:-355px;
+  animation: slidein 4s infinite;
+  font-weight: 700;
+}
+
+section.hero p.sub-title {
     margin-bottom: 32px;
+    margin-top: 16px;
   }
+
+  .hero-content button
+  {
+    position: relative;
+    padding: 0.8375rem 3rem 0.8375rem 1.25rem;
+}
+
+.hero-content button span{
+  position: absolute;
+  right: 20px;
+  top: 37%;
+}
   
-  section.hero .all-icons {
+section.hero .all-icons {
     position: fixed;
     left: 0;
     top: 33%;
     font-size: 1.4rem;
   }
   
-  section.hero .all-icons .icon{
+section.hero .all-icons .icon{
     background-color: #c25eba;
     padding: .5rem;
     border-radius: 0 15px 15px 0;
@@ -53,15 +100,3 @@
     transition: 0.3s;
     cursor: pointer;
   }
-  
-  .hero-content button
-  {
-    position: relative;
-    padding: 0.8375rem 3rem 0.8375rem 1.25rem;
-}
-
-.hero-content button span{
-  position: absolute;
-  right: 20px;
-  top: 37%;
-}
