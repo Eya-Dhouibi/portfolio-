@@ -12,6 +12,9 @@ section#about img {
   flex-wrap: wrap;
   @include flex(center,2rem)
 }
+.skill-card .card-animation{
+  padding: 20px 0;
+}
 
 .skills-grid {
     @include grid-columns(1);
@@ -22,13 +25,15 @@ section#about img {
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    min-height: 175px;
+    min-height: 340px;
   }
   
   .skill-card h3 {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
     color: #333;
+    height: 60px;
+    overflow: hidden;
   }
   
   .skill-card p {
@@ -123,6 +128,9 @@ section#about img {
     &:hover .box{
       opacity: 1;
       visibility: visible;
+    }
+    &:hover h3{
+     color: $white;
     }
       .box {
         position: absolute;

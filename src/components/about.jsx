@@ -17,7 +17,6 @@ const About = () => {
             interfaces adaptées à tous les appareils et navigateurs. Mon objectif
             est de combiner fonctionnalité et créativité dans chaque projet.
           </p>
-          <a href="#contact">Contactez-moi</a>
         </div>
       </section>
     );
