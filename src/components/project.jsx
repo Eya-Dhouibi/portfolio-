@@ -3,7 +3,7 @@ import { useState } from "react";
 const projects = [
   {
     id: 1,
-    title: "Site de Kinésithérapie",
+    title: "florianthibaut kinesitherapeute",
     description: "Création d'un site vitrine responsive pour un cabinet de kinésithérapie.",
     category: "HTML & CSS",
     image: "/img/florianthibautkinesitherapeute.jpg",
@@ -51,13 +51,37 @@ const projects = [
   },
   {
     id: 7,
-    title: "willworkplus",
+    title: "Willworkplus",
     description: "Site de vente en ligne des fruits secs et de chocolate",
     category: "Wordpress & Prestashop",
     image: "/img/willworkplus.jpg",
     link: "https://willworkplus.com/",
   }
-  
+  ,
+  {
+    id: 8,
+    title: "Sandrinegloriant therapie",
+    description: "Espace en ligne apaisant et intuitif, conçu pour accompagner votre parcours vers le bien-être.",
+    category: "HTML & CSS",
+    image: "/img/sandrinegloriant.jpg",
+    link: "www.sandrinegloriant-therapie.fr",
+  },
+  {
+    id: 9,
+    title: "Hlulbayt bookstore",
+    description: "Librairie en ligne dédiée à la richesse du savoir et à la découverte du patrimoine spirituel.",
+    category: "Wordpress & Prestashop",
+    image: "/img/bookstore.jpg",
+    link: "hlulbaytbookstore.tn",
+   },
+  // {
+  //   id: 10,
+  //   title: "Distretto",
+  //   description: "",
+  //   category: "Wordpress & Prestashop",
+  //   image: "/img/willworkplus.jpg",
+  //   link: "https://amazing-jepsen.31-220-87-235.plesk.page/",
+  // }
 ];
 
 const categories = ["Tous les projets", "HTML & CSS", "JavaScript", "Wordpress & Prestashop"];
