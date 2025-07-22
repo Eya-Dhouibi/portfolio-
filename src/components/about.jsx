@@ -1,26 +1,23 @@
 const About = () => {
-    return (
-      <section id="about">
-        <div className="container">
-          <h2>À propos de moi</h2>
-          <img src="/img/me.png" alt="Dhouibi Eya" />
-          <p>
-            Bonjour ! Je suis <span>Dhouibi Eya</span>, développeuse/intégratrice
-            web passionnée, spécialisée dans la création de sites web modernes et
-            fonctionnels. Grâce à mes compétences en HTML, CSS, JavaScript, et
-            divers CMS comme PrestaShop et WordPress, je m'efforce de proposer des
-            solutions alliant esthétisme et performance.
-          </p>
-          <p>
-            Avec une expérience approfondie en intégration web, SEO, et design
-            UX/UI, je veille à offrir une expérience utilisateur optimale et des
-            interfaces adaptées à tous les appareils et navigateurs. Mon objectif
-            est de combiner fonctionnalité et créativité dans chaque projet.
-          </p>
-        </div>
-      </section>
-    );
-  };
-  
-  export default About;
-  
+  return (
+    <section id="about">
+      <div className="container">
+        <h2>About Me</h2>
+        <img src="/img/me.png" alt="Dhouibi Eya" />
+        <p>
+          Hello! I’m <span>Dhouibi Eya</span>, a passionate web developer/integrator
+          specializing in creating modern and functional websites. With strong skills in
+          HTML, CSS, JavaScript, and various CMS platforms like PrestaShop and WordPress,
+          I strive to deliver solutions that combine aesthetics and performance.
+        </p>
+        <p>
+          With in-depth experience in web integration, SEO, and UX/UI design, I focus on
+          providing an optimal user experience and interfaces that adapt to all devices and browsers.
+          My goal is to merge functionality and creativity in every project.
+        </p>
+      </div>
+    </section>
+  );
+};
+
+export default About;

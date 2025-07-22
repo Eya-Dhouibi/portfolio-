@@ -45,11 +45,11 @@ const Header = () => {
 
           <nav className="hidden md:flex">
             <ul className="flex space-x-4">
-              <li className="navbar_item"><a className="navbar_link" href="/#about-me">Accueil</a></li>
-              <li className="navbar_item"><a className="navbar_link" href="/#about">Profil</a></li>
-              <li className="navbar_item"><a className="navbar_link" href="/#skills">Compétences</a></li>
+              <li className="navbar_item"><a className="navbar_link" href="/#about-me">Home</a></li>
+              <li className="navbar_item"><a className="navbar_link" href="/#about">Profile</a></li>
+              <li className="navbar_item"><a className="navbar_link" href="/#skills">Skills</a></li>
               <li className="navbar_item"><a className="navbar_link" href="/#services">Services</a></li>
-              <li className="navbar_item"><a className="navbar_link" href="/#project">Projets</a></li>
+              <li className="navbar_item"><a className="navbar_link" href="/#project">Projects</a></li>
               <li className="navbar_item"><a className="navbar_link" href="/#contact">Contact</a></li>
             </ul>
           </nav>

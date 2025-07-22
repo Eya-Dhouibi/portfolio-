@@ -15,39 +15,39 @@ const Services = () => {
   const services = [
     {
       icon: faCode,
-      title: "Développement Web",
+      title: "Web Development",
       description:
-        "Création de sites Web modernes et performants en utilisant les dernières technologies : HTML5, CSS3, JavaScript, jQuery, Bootstrap, PHP et MySQL.",
-    },
-    {
-      icon:faLaptopCode,
-      title: "Développement WordPress",
-      description:
-        "Développement de sites WordPress personnalisés, y compris l'intégration de thèmes et de plugins, WooCommerce et optimisation SEO.",
-    },
-    {
-      icon: faPalette,
-      title: "Intégration PSD/XD/Figma en HTML/CSS",
-      description:
-        "Conversion précise de maquettes graphiques en code HTML/CSS réactif et optimisé pour une compatibilité sur tous les appareils.",
-    },
-    {
-      icon: faShoppingCart,
-      title: "Création de boutiques WooCommerce",
-      description:
-        "Développement de boutiques en ligne WooCommerce sur mesure, avec des fonctionnalités avancées pour optimiser les ventes et l'expérience utilisateur.",
-    },
-    {
-      icon: faRocket,
-      title: "Optimisation et Performance",
-      description:
-        "Amélioration des performances des sites Web, réduction des temps de chargement et optimisation SEO pour un meilleur classement sur les moteurs de recherche.",
+        "Creation of modern and high-performance websites using the latest technologies: HTML5, CSS3, JavaScript, jQuery, Bootstrap, PHP, and MySQL.",
     },
     {
       icon: faLaptopCode,
-      title: "Conception de Pages de Destination",
+      title: "WordPress Development",
       description:
-        "Création de pages de destination impactantes et optimisées pour maximiser les conversions et améliorer la génération de leads.",
+        "Development of custom WordPress websites, including theme and plugin integration, WooCommerce setup, and SEO optimization.",
+    },
+    {
+      icon: faPalette,
+      title: "PSD/XD/Figma to HTML/CSS Integration",
+      description:
+        "Precise conversion of graphic mockups into responsive and optimized HTML/CSS code compatible across all devices.",
+    },
+    {
+      icon: faShoppingCart,
+      title: "WooCommerce Store Creation",
+      description:
+        "Custom development of WooCommerce online stores with advanced features to boost sales and enhance user experience.",
+    },
+    {
+      icon: faRocket,
+      title: "Performance Optimization",
+      description:
+        "Improvement of website performance, reduced loading times, and SEO optimization for better search engine rankings.",
+    },
+    {
+      icon: faLaptopCode,
+      title: "Landing Page Design",
+      description:
+        "Creation of impactful and optimized landing pages to maximize conversions and improve lead generation.",
     },
   ];
 
@@ -80,7 +80,7 @@ const Services = () => {
   return (
     <section id="services" className="services-section">
       <div className="container">
-        <h2 className="section-title">Services Offerts</h2>
+        <h2 className="section-title">Offered Services</h2>
         <div className="slider-wrapper">
           <Slider {...settings}>
             {services.map((service, index) => (

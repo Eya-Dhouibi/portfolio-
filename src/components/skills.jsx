@@ -8,24 +8,24 @@ const Skills = () => {
   const skills = [
     {
       animation: "/img/Animation-ux.lottie",
-      category: "Design & Création Graphique",
+      category: "Design & Graphic Creation",
       items: ["UX/UI", "Photoshop", "Illustrator"],
     },
     {
       animation: "/img/Animation-dev.lottie",
-      category: "Développement Front-End",
+      category: "Front-End Development",
       items: ["HTML", "CSS", "JavaScript", "SASS", "Gulp", "Twig", "Smarty", "Webpack"],
     },
     {
       animation: "/img/Animation-cms.lottie",
-      category: "Développement CMS",
+      category: "CMS Development",
       items: ["WordPress", "Elementor", "WooCommerce", "PrestaShop", "PHP", "MySQL"],
     },
     {
       animation: "/img/Animation-seo.lottie",
-      category: "Analyse et SEO",
+      category: "Analytics & SEO",
       items: ["Google Analytics", "Google Search Console"],
-    }
+    },
   ];
 
   const settings = {
@@ -46,16 +46,16 @@ const Skills = () => {
   return (
     <section id="skills" className="skills-section">
       <div className="container">
-        <h2 className="section-title">Compétences</h2>
+        <h2 className="section-title">Skills</h2>
         <Slider {...settings}>
           {skills.map((skill, index) => (
             <div className="skill-card" key={index}>
               <h3>{skill.category}</h3>
-            <div className="card-animation">
-            {skill.animation && (
-                <DotLottieReact src={skill.animation} loop autoplay />
-              )}
-            </div>
+              <div className="card-animation">
+                {skill.animation && (
+                  <DotLottieReact src={skill.animation} loop autoplay />
+                )}
+              </div>
               <p>
                 {skill.items.map((item, idx) => (
                   <span key={idx}>
