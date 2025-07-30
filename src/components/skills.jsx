@@ -1,8 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const Skills = () => {
   const skills = [
@@ -44,29 +44,43 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="skills-section">
+    <section id="skills" className="skills-section" data-aos="fade-up">
       <div className="container">
-        <h2 className="section-title">Skills</h2>
-        <Slider {...settings}>
-          {skills.map((skill, index) => (
-            <div className="skill-card" key={index}>
-              <h3>{skill.category}</h3>
-              <div className="card-animation">
-                {skill.animation && (
-                  <DotLottieReact src={skill.animation} loop autoplay />
-                )}
+        <h2 className="section-title" data-aos="zoom-in">
+          Skills
+        </h2>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <Slider {...settings}>
+            {skills.map((skill, index) => (
+              <div
+                className="skill-card"
+                key={index}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                <h3>{skill.category}</h3>
+                <div className="card-animation">
+                  {skill.animation && (
+                    <DotLottieReact
+                      src={skill.animation}
+                      loop
+                      autoplay
+                      style={{ width: "100%", height: "auto" }}
+                    />
+                  )}
+                </div>
+                <p>
+                  {skill.items.map((item, idx) => (
+                    <span key={idx}>
+                      {item}
+                      {idx < skill.items.length - 1 ? ", " : ""}
+                    </span>
+                  ))}
+                </p>
               </div>
-              <p>
-                {skill.items.map((item, idx) => (
-                  <span key={idx}>
-                    {item}
-                    {idx < skill.items.length - 1 ? ", " : ""}
-                  </span>
-                ))}
-              </p>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </div>
       </div>
     </section>
   );

@@ -78,13 +78,20 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="services-section">
+    <section id="services" className="services-section" data-aos="fade-up">
       <div className="container">
-        <h2 className="section-title">Offered Services</h2>
-        <div className="slider-wrapper">
+        <h2 className="section-title" data-aos="zoom-in">
+          Offered Services
+        </h2>
+        <div className="slider-wrapper" data-aos="fade-up" data-aos-delay="200">
           <Slider {...settings}>
             {services.map((service, index) => (
-              <div className="service-card" key={index}>
+              <div
+                className="service-card"
+                key={index}
+                data-aos="fade-up"
+                data-aos-delay={index * 150}
+              >
                 <FontAwesomeIcon icon={service.icon} size="2x" />
                 <h4>{service.title}</h4>
                 <p>{service.description}</p>

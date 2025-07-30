@@ -87,15 +87,17 @@ const Project = () => {
 
   return (
     <section id="project">
-      <div className="container">
-        <h2>Projects</h2>
+      <div className="container" data-aos="fade-up">
+        <h2 data-aos="zoom-in">Projects</h2>
         <div className="myProject-content">
-          <div className="left-section">
-            {categories.map((category) => (
+          <div className="left-section" data-aos="fade-right">
+            {categories.map((category, index) => (
               <button
                 key={category}
                 className={activeCategory === category ? "active" : ""}
                 onClick={() => setActiveCategory(category)}
+                data-aos="fade-left"
+                data-aos-delay={index * 100}
               >
                 {category}
               </button>
@@ -104,23 +106,40 @@ const Project = () => {
 
           <div className="right-section">
             {filteredProjects.length > 0 ? (
-              filteredProjects.map((project) => (
-                <article key={project.id} className="card">
+              filteredProjects.map((project, index) => (
+                <article
+                  key={project.id}
+                  className="card"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                >
                   <img src={project.image} alt={project.title} />
                   <div className="box">
                     <h3 className="title">{project.title}</h3>
                     <p className="sub-title">{project.description}</p>
                     <div className="flex icons">
-                      <a className="link flex" href={project.link.startsWith("http") ? project.link : `https://${project.link}`} target="_blank" rel="noopener noreferrer">
+                      <a
+                        className="link flex"
+                        href={
+                          project.link.startsWith("http")
+                            ? project.link
+                            : `https://${project.link}`
+                        }
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Visit Website
-                        <span style={{ alignSelf: "end" }} className="icon-arrow-right"></span>
+                        <span
+                          style={{ alignSelf: "end" }}
+                          className="icon-arrow-right"
+                        ></span>
                       </a>
                     </div>
                   </div>
                 </article>
               ))
             ) : (
-              <p>No projects available for this category.</p>
+              <p data-aos="fade-in">No projects available for this category.</p>
             )}
           </div>
         </div>
